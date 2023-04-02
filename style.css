@@ -1,0 +1,180 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(206, 206, 176);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: -40px;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/*Token Select Section*/
+#tokenPickSection {
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.words {
+    position: relative;
+    text-align: center;
+}
+
+.words:hover::after {
+    width: 100%;
+}
+
+.words::after {
+    content: "";
+    height: 6px;
+    width: 0%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.5s;
+} 
+
+.pickbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+}
+
+.pick {
+    color: white;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: black;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.pick:hover {
+    color: black;
+    background-color: white;
+}
+
+.pick:active {
+    background-color: rgb(156, 153, 153);
+}
+
+/*Playing Section*/
+#playingSection {
+    width: 100vw;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+#playingField {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    grid-template-rows: repeat(3, 170px);
+    gap: 10px;
+    position: relative;
+    right: 85px;
+}
+.space {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.space:hover{
+    background-color: rgb(202, 192, 192);
+}
+.space:active{
+    background-color: rgb(165, 159, 159);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#resetButton {
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: black;
+    transition: 200ms;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+}
+
+#resetButton:hover {
+    color: black;
+    background-color: white;
+}
+
+#resetButton:active {
+    background-color: rgb(156, 153, 153);
+}
+
+#undoButton {
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: black;
+    transition: 200ms;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+}
+
+#undoButton:hover {
+    color: black;
+    background-color: white;
+}
+
+#undoButton:active {
+    background-color: rgb(156, 153, 153);
+}
+
+#turnText {
+    font-size: 50px;
+}
+
+#winText {
+    font-size: 100px;
+    position: absolute;
+    bottom: 80px;
+}
