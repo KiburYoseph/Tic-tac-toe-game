@@ -86,25 +86,24 @@ main{
     display: none;
     justify-content: space-around;
     align-items: center;
-    gap: 50px;
+    gap: clamp(0.2rem, 10vw, 7rem);
     position: relative;
 }
 
 #playingField {
     background-color: rgb(0, 0, 0);
     display: grid;
-    grid-template-columns: repeat(3, 170px);
-    grid-template-rows: repeat(3, 170px);
-    gap: 10px;
-    position: relative;
-    right: 85px;
+    grid-template-columns: repeat(3, clamp(0.2rem, 15vw, 10rem));
+    grid-template-rows: repeat(3, clamp(0.2rem, 15vw, 10rem));
+    margin-right: clamp(0.2rem, 15vw, 7rem);
+    gap: clamp(0.1rem, 2vw, 0.6rem);
 }
 .space {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 90px;
+    font-size: clamp(0.2rem, 15vw, 8rem);
     transition: 200ms;
     cursor: pointer;
 }
